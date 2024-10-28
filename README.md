@@ -40,7 +40,7 @@ This is a personal portfolio website to present my professional background, incl
    Open `index.html` in your preferred web browser to view the website locally.
 
 ## Usage
-This portfolio website is hosted on GitHub Pages. Visit [here](https://github.com/matanmay/portfolio) to view the live version.
+This portfolio website is hosted on Netlify. Please feel free to visit ([here](https://matanmay.netlify.app/)) to view the live version.
 
 To edit or update any content, modify the HTML and CSS files within the repository. If you are making major changes, please consider creating a new branch.
 
