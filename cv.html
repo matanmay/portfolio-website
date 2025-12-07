@@ -1,170 +1,252 @@
 <!DOCTYPE html>
-<html data-bs-theme="light">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matan Mayerowicz - CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Matan Mayerowicz - My CV</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-</head>
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+    </style>
+  </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top portfolio-navbar gradient navbar-dark">
-        <div class="container"><a class="navbar-brand logo" href="index.html">Matan Mayerowicz</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="cv.html">CV</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contactMe.html">Contact Me</a></li>
-                </ul>
+  <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 bg-white/90 backdrop-blur-md">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <span class="self-center text-2xl font-bold whitespace-nowrap bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Matan Mayerowicz</span>
+        </a>
+        <button id="navbar-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+            <li>
+              <a href="index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 transition-colors">Home</a>
+            </li>
+            <li>
+              <a href="projects.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 transition-colors">Projects</a>
+            </li>
+            <li>
+              <a href="cv.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">CV</a>
+            </li>
+            <li>
+              <a href="contactMe.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 transition-colors">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-grow pt-28 pb-16">
+      <div class="container mx-auto px-6 max-w-5xl">
+        
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-12 flex flex-col md:flex-row items-center md:items-start gap-8">
+            <div class="w-32 h-32 flex-shrink-0">
+                 <img 
+                    class="rounded-full w-full h-full object-cover shadow-md border-4 border-gray-50" 
+                    src="assets/img/me.jpeg" 
+                    alt="Matan Mayerowicz"
+                    onerror="this.src='https://ui-avatars.com/api/?name=Matan+M&background=0D8ABC&color=fff&size=128'" 
+                />
+            </div>
+            <div class="flex-grow text-center md:text-left">
+                <h1 class="text-3xl font-bold text-gray-900 mb-4">Matan Mayerowicz</h1>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Hello! I'm a <strong>Software Engineer and HCI Researcher</strong> pursuing a Master's in Information Systems. 
+                    I specialize in building robust, scalable applications using <strong>Python, C#, Java and ReactJS</strong>. 
+                    By combining strong technical architecture with User-Centered Design principles, 
+                    I bridge the gap between complex backend logic and intuitive frontend implementation.
+                </p>
+                <a href="contactMe.html" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors shadow-sm">
+                    Hire Me
+                </a>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            <div class="lg:col-span-2 space-y-12">
+                
+                <section>
+                    <div class="flex items-center mb-8">
+                        <div class="p-2 bg-blue-100 rounded-lg text-blue-600 mr-4">
+                            <ion-icon name="briefcase-outline" class="text-2xl"></ion-icon>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900">Work Experience</h2>
+                    </div>
+
+                    <div class="space-y-8 border-l-2 border-gray-200 ml-3 pl-8 relative">
+                        <div class="relative">
+                            <span class="absolute -left-[39px] top-1 w-5 h-5 bg-blue-600 rounded-full border-4 border-white"></span>
+                            <h3 class="text-xl font-bold text-gray-900">Research Assistant</h3>
+                            <div class="flex flex-wrap gap-2 items-center mb-2 mt-1">
+                                <span class="text-blue-600 font-semibold">University of Haifa</span>
+                                <span class="text-gray-400 text-sm">•</span>
+                                <span class="text-gray-500 text-sm italic">02/2023 - Present</span>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Conducting user research for teleoperation systems and analyzing user behaviors. Designing user interfaces using ReactJS with a focus on usability. Leading development of human-robot interaction systems using ROS, Docker, and Flask.
+                            </p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[39px] top-1 w-5 h-5 bg-gray-300 rounded-full border-4 border-white"></span>
+                            <h3 class="text-xl font-bold text-gray-900">Teaching Assistant</h3>
+                            <div class="flex flex-wrap gap-2 items-center mb-2 mt-1">
+                                <span class="text-blue-600 font-semibold">University of Haifa</span>
+                                <span class="text-gray-400 text-sm">•</span>
+                                <span class="text-gray-500 text-sm italic">10/2021 - 11/2025</span>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Mentoring 100+ students in system design (UML, ERD, DFD, BPMN). Facilitating understanding of user-centered design principles and system analysis.
+                            </p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[39px] top-1 w-5 h-5 bg-gray-300 rounded-full border-4 border-white"></span>
+                            <h3 class="text-xl font-bold text-gray-900">NOC Team Leader</h3>
+                            <div class="flex flex-wrap gap-2 items-center mb-2 mt-1">
+                                <span class="text-blue-600 font-semibold">Israeli Army</span>
+                                <span class="text-gray-400 text-sm">•</span>
+                                <span class="text-gray-500 text-sm italic">12/2017 - 08/2019</span>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Led a team of 7 at the Network Operation Center. Designed monitoring systems and collaborated with cross-functional teams to deliver technical solutions in a high-pressure environment.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center mb-8">
+                        <div class="p-2 bg-blue-100 rounded-lg text-blue-600 mr-4">
+                            <ion-icon name="school-outline" class="text-2xl"></ion-icon>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900">Education</h2>
+                    </div>
+
+                    <div class="space-y-8 border-l-2 border-gray-200 ml-3 pl-8 relative">
+                        <div class="relative">
+                            <span class="absolute -left-[39px] top-1 w-5 h-5 bg-blue-600 rounded-full border-4 border-white"></span>
+                            <h3 class="text-xl font-bold text-gray-900">M.Sc. in Information Systems</h3>
+                            <p class="text-gray-700 font-medium">Human-Computer Interaction Specialization</p>
+                            <div class="flex flex-wrap gap-2 items-center mb-2 mt-1">
+                                <span class="text-blue-600 font-semibold">University of Haifa</span>
+                                <span class="text-gray-400 text-sm">•</span>
+                                <span class="text-gray-500 text-sm italic">10/2023 - Present</span>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Specialized in UI design, cognitive psychology, and usability engineering. Currently conducting HCI research on complex interactive systems.
+                            </p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[39px] top-1 w-5 h-5 bg-gray-300 rounded-full border-4 border-white"></span>
+                            <h3 class="text-xl font-bold text-gray-900">B.Sc. in Information Systems</h3>
+                            <p class="text-gray-700 font-medium">Software Development Specialization</p>
+                            <div class="flex flex-wrap gap-2 items-center mb-2 mt-1">
+                                <span class="text-blue-600 font-semibold">University of Haifa</span>
+                                <span class="text-gray-400 text-sm">•</span>
+                                <span class="text-gray-500 text-sm italic">03/2020 - 07/2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="lg:col-span-1 space-y-8">
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Technical Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">Python / Flask / FastAPI</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">JavaScript / ReactJS</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">Java</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">C# (Unity)</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">Git & Docker</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">ROS</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">SQL & MongoDB</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">UML / ERD / BPMN</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">UX/UI Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">User Research</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Figma</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Wireframing</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Prototyping</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Usability Testing</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Data Visualization</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 text-white p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-lg font-bold mb-6">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <ion-icon name="mail-outline" class="text-xl mr-3 text-blue-400 mt-0.5"></ion-icon>
+                            <span class="text-gray-300 hover:text-white transition-colors">matan417@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="call-outline" class="text-xl mr-3 text-blue-400 mt-0.5"></ion-icon>
+                            <span class="text-gray-300">+972 50-878-4849</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="logo-linkedin" class="text-xl mr-3 text-blue-400 mt-0.5"></ion-icon>
+                            <a href="https://www.linkedin.com/in/matan-mayerowicz" target="_blank" class="text-gray-300 hover:text-white underline decoration-blue-400 transition-colors">LinkedIn Profile</a>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="logo-github" class="text-xl mr-3 text-blue-400 mt-0.5"></ion-icon>
+                            <a href="https://github.com/matanmay" target="_blank" class="text-gray-300 hover:text-white underline decoration-blue-400 transition-colors">GitHub Profile</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
-    </nav>
-    <main class="page">
-        <section class="portfolio-block block-intro border-bottom">
-            <div class="container">
-                <div class="avatar" style="background-image: url('assets/img/me.jpeg');"></div>
-                <div class="about-me">
-                    <p>
-                        Hello! I'm <strong>Matan Mayerowicz</strong>, a Software Engineer and HCI Researcher 
-                        pursuing a Master's in Information Systems. I specialize in building robust, 
-                        scalable applications using <strong>Python, C#, Java and ReactJS</strong>. 
-                        By combining strong technical architecture with User-Centered Design principles, 
-                        I bridge the gap between complex backend logic and intuitive frontend implementation.
-                    </p>
-                    <a class="btn btn-outline-primary" role="button" href="contactMe.html">Hire me</a>
-                </div>
-            </div>
-        </section>
-        <section class="portfolio-block cv">
-            <div class="container">
-                <div class="work-experience group">
-                    <div class="heading">
-                        <h2 class="text-center">Work Experience</h2>
-                    </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3>Research Assistant</h3><span class="badge rounded-pill bg-primary">University of Haifa</span>
-                            </div>
-                            <div class="col-md-6"><span class="text-muted period">02/2023 - Present</span></div>
-                        </div>
-                        <p>Conducting user research for teleoperation systems, analyzing user needs and behaviors. Designing and implementing user interfaces using ReactJS with focus on usability and user experience. Leading development of human-robot interaction systems using ROS, Docker, and Flask. Collaborating with interdisciplinary research team to translate UX requirements into functional systems.</p>
-                    </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3>Teaching Assistant</h3><span class="badge rounded-pill bg-primary">University of Haifa</span>
-                            </div>
-                            <div class="col-md-6"><span class="text-muted period">10/2021 - 11/2025</span></div>
-                        </div>
-                        <p>Mentoring 100+ students in system design methodologies and modeling techniques. Teaching UML, ERD, DFD, AOA, BPMN, and requirements engineering. Facilitating understanding of user-centered design principles and system analysis. Demonstrating strong communication skills through effective teaching and feedback.</p>
-                    </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3>NOC Team Leader</h3><span class="badge rounded-pill bg-primary">Israeli Army</span>
-                            </div>
-                            <div class="col-md-6"><span class="text-muted period">12/2017 - 08/2019</span></div>
-                        </div>
-                        <p>Led team of 7 members at the Network Operation Center. Designed and implemented monitoring systems with focus on user experience. Collaborated with cross-functional teams to deliver technical solutions. Developed strong leadership, teamwork, and communication abilities in high-pressure environment.</p>
-                    </div>
-                </div>
-                <div class="education group">
-                    <div class="heading">
-                        <h2 class="text-center">Education</h2>
-                    </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3>M.Sc. in Information Systems</h3>
-                                <h4 class="text-muted">Human-Computer Interaction Specialization</h4>
-                                <span class="badge rounded-pill bg-success">University of Haifa</span>
-                            </div>
-                            <div class="col-md-6"><span class="text-muted period">10/2023 - Present</span></div>
-                        </div>
-                        <p>Specialized coursework in user interface design, cognitive psychology, and usability engineering. Training in Figma, user research methods, and interaction design principles. Currently conducting HCI research with focus on complex interactive systems.</p>
-                    </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3>B.Sc. in Information Systems</h3>
-                                <h4 class="text-muted">Software Development Specialization</h4>
-                                <span class="badge rounded-pill bg-success">University of Haifa</span>
-                            </div>
-                            <div class="col-6"><span class="text-muted period">03/2020 - 07/2023</span></div>
-                        </div>
-                        <p>Strong foundation in system design, software development, and user-centered design principles. Gained expertise in programming, system modeling (UML, ERD, DFD), and project management.</p>
-                    </div>
-                </div>
-                <div class="group">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="border rounded border-0 skills portfolio-info-card">
-                                <h2>UX/UI Skills</h2>
-                                <h3>User Research & Analysis</h3>
-                                <h3>Data Visualizations</h3>
-                                <h3>Interface Design (Figma)</h3>
-                                <h3>Wireframing & Prototyping</h3>
-                                <h3>User-Centered Design</h3>
-                                <h3>Usability Testing</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="border rounded border-0 skills portfolio-info-card">
-                                <h2>Technical Skills</h2>
-                                <h3>JavaScript / ReactJS</h3>
-                                <h3>Python / Flask / FastAPI</h3>
-                                <h3>Java</h3>
-                                <h3>UML, ERD, DFD, BPMN</h3>
-                                <h3>Git, Docker, ROS</h3>
-                                <h3>Unity (C#)</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-md-12">
-                            <div class="border rounded border-0 contact-info portfolio-info-card">
-                                <h2>Contact Info</h2>
-                                <div class="row">
-                                    <div class="col-1"><i class="icon ion-person icon"></i></div>
-                                    <div class="col-11"><span>Matan Mayerowicz</span></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-1"><i class="icon ion-at icon"></i></div>
-                                    <div class="col-11"><span>matan417@gmail.com</span></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-1"><i class="icon ion-iphone icon"></i></div>
-                                    <div class="col-11"><span>+972 50-878-4849</span></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-1"><i class="icon ion-social-linkedin icon"></i></div>
-                                    <div class="col-11"><a href="https://www.linkedin.com/in/matan-mayerowicz" target="_blank">linkedin.com/in/matan-mayerowicz</a></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-1"><i class="icon ion-social-github icon"></i></div>
-                                    <div class="col-11"><a href="https://github.com/matanmay" target="_blank">github.com/matanmay</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+      </div>
     </main>
-    <footer class="page-footer py-3 border-top">
-        <div class="container my-4">
-            <div class="links"><a href="index.html">About me</a><a href="contactMe.html">Contact me</a><a href="projects.html">Projects</a></div>
-            <div class="social-icons"><a class="me-3" href="https://github.com/matanmay/"><i class="icon ion-social-github-outline"></i></a><a class="me-3" href="https://www.linkedin.com/in/matan-mayerowicz/"><i class="icon ion-social-linkedin-outline"></i></a></div>
+
+    <footer class="bg-white border-t border-gray-200 py-10">
+        <div class="container mx-auto px-6 flex flex-col items-center">
+            <div class="flex space-x-6 mb-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">About Me</a>
+                <a href="projects.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Projects</a>
+                <a href="contactMe.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Contact</a>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="https://github.com/matanmay/" target="_blank" class="text-gray-400 hover:text-gray-900 text-2xl transition-colors">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/matan-mayerowicz/" target="_blank" class="text-gray-400 hover:text-blue-700 text-2xl transition-colors">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+            
+            <p class="mt-8 text-sm text-gray-500">© 2025 Matan Mayerowicz. All rights reserved.</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
-</body>
 
-</html
+    <script>
+        const btn = document.getElementById('navbar-toggle');
+        const menu = document.getElementById('navbar-default');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+  </body>
+</html>

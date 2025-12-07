@@ -1,157 +1,165 @@
 <!DOCTYPE html>
-<html data-bs-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <title>Matan Mayerowicz</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/styles.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matan Mayerowicz - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      /* Smooth scrolling */
+      html { scroll-behavior: smooth; }
+    </style>
   </head>
 
-  <body>
-    <nav
-      class="navbar navbar-expand-lg fixed-top portfolio-navbar gradient navbar-dark"
-    >
-      <div class="container">
-        <a class="navbar-brand logo" href="index.html">Matan Mayerowicz</a
-        ><button
-          data-bs-toggle="collapse"
-          class="navbar-toggler"
-          data-bs-target="#navbarNav"
-        >
-          <span class="visually-hidden">Toggle navigation</span
-          ><span class="navbar-toggler-icon"></span>
+  <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 bg-white/90 backdrop-blur-md">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <span class="self-center text-2xl font-bold whitespace-nowrap bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Matan Mayerowicz</span>
+        </a>
+        <button id="navbar-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+            <li>
+              <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Projects</a>
+            <li>
+              <a href="projects.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 transition-colors">Projects</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-             <li class="nav-item"><a class="nav-link active" href="contactMe.html">Contact Me</a></li>
+            <li>
+              <a href="cv.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 transition-colors">CV</a>
+            </li>
+            <li>
+              <a href="contactMe.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 transition-colors">Contact Me</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-    <main class="page">
-      <section class="portfolio-block block-intro">
-        <div class="container">
-          <div
-            class="avatar"
-            style="background-image: url('assets/img/me.jpeg')"
-          ></div>
-          <div class="about-me">
-          <p>
-            Hello! I'm <strong>Matan Mayerowicz</strong>, a Software Engineer and HCI Researcher 
-            pursuing a Master's degree in Information Systems. I specialize in building robust, 
-            user-centric applications by combining strong backend logic with intuitive frontend design. 
-            With a solid B.Sc. background in software architecture and expertise in 
-            <strong>Python, C#,Java, ReactJS, and SQL</strong>, I bridge the gap between complex 
-            data systems and seamless user experiences. I am passionate about developing 
-            efficient, scalable solutions that are both technically sound and impactful for the user.<br /><br />
-          </p>
-            <a
-              class="btn btn-outline-primary"
-              role="button"
-              href="contactMe.html"
-              >Hire me</a
-            >
-          </div>
+
+    <main class="flex-grow pt-24">
+      <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            
+            <div class="relative w-40 h-40 mx-auto mb-8">
+                <img 
+                    class="rounded-full w-full h-full object-cover shadow-xl border-4 border-white ring-2 ring-blue-100" 
+                    src="assets/img/me.jpeg" 
+                    alt="Matan Mayerowicz"
+                    onerror="this.src='https://ui-avatars.com/api/?name=Matan+M&background=0D8ABC&color=fff&size=256'" 
+                />
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+                    Software Engineer & <span class="text-blue-600">HCI Researcher</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-10 font-light">
+                    Hello! I'm <strong>Matan Mayerowicz</strong>, pursuing a Master's degree in Information Systems. 
+                    I specialize in building robust, user-centric applications by combining strong backend logic with intuitive frontend design.
+                    With a solid B.Sc. background in software architecture and expertise in 
+                    <span class="font-semibold text-gray-800">Python, C#, Java, ReactJS, and SQL</span>, 
+                    I bridge the gap between complex data systems and seamless user experiences. 
+                    I am passionate about developing efficient, scalable solutions that are technically sound and impactful.
+                </p>
+                
+                <a href="contactMe.html" class="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    Hire Me
+                </a>
+            </div>
         </div>
       </section>
-      <section class="portfolio-block photography"></section>
-      <section class="portfolio-block skills">
-        <div class="container">
-          <div class="heading">
-            <h2>Special Skills</h2>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card special-skill-item border-0">
-                <div class="card-header bg-transparent border-0">
-                  <i class="icon ion-ios-lightbulb-outline"></i>
-                </div>
-                <div class="card-body">
-                  <h3 class="card-title">UX Research & Design</h3>
-                  <p class="card-text">
-                    Conducting user research to understand needs, behaviors, and pain points. 
-                    I specialize in creating wireframes, prototypes, and user flows using Figma. 
-                    My approach combines usability testing, user interviews, and data analysis 
-                    to design interfaces that users love. I believe in user-centered design 
-                    principles that put people first.
-                  </p>
-                </div>
-              </div>
+
+      <section class="py-16 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Special Skills</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto rounded"></div>
             </div>
-            <div class="col-md-4">
-              <div class="card special-skill-item border-0">
-                <div class="card-header bg-transparent border-0">
-                  <i class="icon ion-ios-star-outline"></i>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="text-4xl text-blue-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <ion-icon name="bulb-outline"></ion-icon>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">UX Research & Design</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Conducting user research to understand needs, behaviors, and pain points. 
+                        I specialize in creating wireframes, prototypes, and user flows using <strong>Figma</strong>. 
+                        My approach combines usability testing and data analysis to design interfaces that people love.
+                    </p>
                 </div>
-                <div class="card-body">
-                  <h3 class="card-title">Interface Development</h3>
-                  <p class="card-text">
-                    Bringing designs to life with modern web technologies. With expertise 
-                    in ReactJS, JavaScript, and Python, I build responsive and interactive 
-                    interfaces that provide seamless user experiences. My technical background 
-                    allows me to collaborate effectively with development teams and ensure 
-                    designs are implemented with precision and attention to detail.
-                  </p>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="text-4xl text-blue-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <ion-icon name="code-slash-outline"></ion-icon>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Interface Development</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Bringing designs to life with modern web technologies. With expertise in 
+                        <strong>ReactJS, JavaScript, and Python</strong>, I build responsive interfaces 
+                        that provide seamless experiences. I ensure designs are implemented with precision.
+                    </p>
                 </div>
-              </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="text-4xl text-blue-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">System Design & Modeling</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Creating comprehensive system designs (UML, ERD, DFD). I excel at translating user 
+                        requirements into technical specifications. Experienced with technologies like 
+                        <strong>ROS, Docker, and AWS</strong>.
+                    </p>
+                </div>
+
             </div>
-            <div class="col-md-4">
-              <div class="card special-skill-item border-0">
-                <div class="card-header bg-transparent border-0">
-                  <i class="icon ion-ios-gear-outline"></i>
-                </div>
-                <div class="card-body">
-                  <h3 class="card-title">System Design & Modeling</h3>
-                  <p class="card-text">
-                    Creating comprehensive system designs for complex applications. 
-                    Proficient in UML, ERD, DFD, BPMN, and requirements engineering. 
-                    I excel at translating user requirements into technical specifications 
-                    and working with cross-functional teams to deliver solutions. My experience 
-                    includes working with cutting-edge technologies like ROS, Docker, and AWS.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>
-    <footer class="page-footer py-3 border-top">
-      <div class="container my-4">
-        <div class="links">
-          <a href="index.html">About me</a
-          ><a href="contactMe.html">Contact me</a
-          ><a href="projects.html">Projects</a>
+
+    <footer class="bg-white border-t border-gray-200 py-10">
+        <div class="container mx-auto px-6 flex flex-col items-center">
+            <div class="flex space-x-6 mb-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">About Me</a>
+                <a href="projects.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Projects</a>
+                <a href="contactMe.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Contact</a>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="https://github.com/matanmay/" target="_blank" class="text-gray-400 hover:text-gray-900 text-2xl transition-colors">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/matan-mayerowicz/" target="_blank" class="text-gray-400 hover:text-blue-700 text-2xl transition-colors">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+            
+            <p class="mt-8 text-sm text-gray-500">© 2025 Matan Mayerowicz. All rights reserved.</p>
         </div>
-        <div class="social-icons">
-          <a class="me-3" href="https://github.com/matanmay/"
-            ><i class="icon ion-social-github-outline"></i></a
-          ><a class="me-3" href="https://www.linkedin.com/in/matan-mayerowicz/"
-            ><i class="icon ion-social-linkedin-outline"></i
-          ></a>
-        </div>
-      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
+
+    <script>
+        const btn = document.getElementById('navbar-toggle');
+        const menu = document.getElementById('navbar-default');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
   </body>
 </html>

@@ -1,276 +1,245 @@
 <!DOCTYPE html>
-<html data-bs-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <title>Contact Me - Matan Mayerowicz</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/styles.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matan Mayerowicz - Contact Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <style>
-      .contact-form-section {
-        padding: 80px 0;
-        min-height: calc(100vh - 200px);
+      body { font-family: 'Inter', sans-serif; }
+      /* Custom loader animation */
+      .loader {
+        border-top-color: #2563EB;
+        -webkit-animation: spinner 1.5s linear infinite;
+        animation: spinner 1.5s linear infinite;
       }
-      .contact-form {
-        max-width: 600px;
-        margin: 0 auto;
-        background: #fff;
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      }
-      .form-control:focus {
-        border-color: #6c63ff;
-        box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
-      }
-      .btn-submit {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border: none;
-        padding: 12px 40px;
-        font-weight: 600;
-        transition: transform 0.2s;
-      }
-      .btn-submit:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      }
-      .alert-custom {
-        display: none;
-        margin-top: 20px;
-      }
-      .loading {
-        display: none;
-        text-align: center;
-        margin-top: 20px;
-      }
-      .spinner-border {
-        width: 2rem;
-        height: 2rem;
+      @keyframes spinner {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
       }
     </style>
   </head>
 
-  <body>
-    <nav
-      class="navbar navbar-expand-lg fixed-top portfolio-navbar gradient navbar-dark"
-    >
-      <div class="container">
-        <a class="navbar-brand logo" href="index.html">Matan Mayerowicz</a>
-        <button
-          data-bs-toggle="collapse"
-          class="navbar-toggler"
-          data-bs-target="#navbarNav"
-        >
-          <span class="visually-hidden">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
+  <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 bg-white/90 backdrop-blur-md">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <span class="self-center text-2xl font-bold whitespace-nowrap bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Matan Mayerowicz</span>
+        </a>
+        <button id="navbar-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+            <li>
+              <a href="index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 transition-colors">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Projects</a>
+            <li>
+              <a href="projects.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 transition-colors">Projects</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-            <li class="nav-item"><a class="nav-link active" href="contactMe.html">Contact Me</a></li>
+            <li>
+              <a href="cv.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 transition-colors">CV</a>
+            </li>
+            <li>
+              <a href="contactMe.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Contact Me</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <main class="page">
-      <section class="contact-form-section">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h1>Get In Touch</h1>
-            <p class="lead text-muted">
-              Interested in working together? Fill out the form below and I'll get back to you as soon as possible.
+    <main class="flex-grow pt-28 pb-16">
+      <div class="container mx-auto px-6 max-w-6xl">
+        
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                Interested in working together? Fill out the form below or reach out directly, and I'll get back to you as soon as possible.
             </p>
-          </div>
-
-          <div class="contact-form">
-            <form id="contactForm">
-              <div class="mb-4">
-                <label for="name" class="form-label">Your Name *</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  name="name"
-                  required
-                  placeholder="John Doe"
-                />
-              </div>
-
-              <div class="mb-4">
-                <label for="email" class="form-label">Your Email *</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  required
-                  placeholder="john@example.com"
-                />
-              </div>
-
-              <div class="mb-4">
-                <label for="phone" class="form-label">Phone Number (Optional)</label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="phone"
-                  name="phone"
-                  placeholder="+972 50-123-4567"
-                />
-              </div>
-
-              <div class="mb-4">
-                <label for="title" class="form-label">Subject *</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="title"
-                  name="title"
-                  required
-                  placeholder="UX Design Project"
-                />
-              </div>
-
-              <div class="mb-4">
-                <label for="message" class="form-label">Your Message *</label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  name="message"
-                  rows="6"
-                  required
-                  placeholder="Tell me about your project..."
-                ></textarea>
-              </div>
-
-              <div class="d-grid">
-                <button type="submit" class="btn btn-primary btn-submit">
-                  Send Message
-                </button>
-              </div>
-
-              <div class="loading">
-                <div class="spinner-border text-primary" role="status">
-                  <span class="visually-hidden">Loading...</span>
-                </div>
-                <p class="mt-2">Sending your message...</p>
-              </div>
-
-              <div class="alert alert-success alert-custom" id="successAlert">
-                <i class="icon ion-checkmark-circled"></i>
-                <strong>Success!</strong> Your message has been sent. I'll get back to you soon!
-              </div>
-
-              <div class="alert alert-danger alert-custom" id="errorAlert">
-                <i class="icon ion-close-circled"></i>
-                <strong>Error!</strong> Something went wrong. Please try again or email me directly at 
-                <a href="mailto:matan417@gmail.com">matan417@gmail.com</a>
-              </div>
-            </form>
-
-            <div class="text-center mt-4">
-              <p class="text-muted">Or reach me directly:</p>
-              <p>
-                <i class="icon ion-email"></i> 
-                <a href="mailto:matan417@gmail.com">matan417@gmail.com</a>
-              </p>
-              <p>
-                <i class="icon ion-iphone"></i> 
-                <a href="tel:+972508784849">+972 50-878-4849</a>
-              </p>
-            </div>
-          </div>
         </div>
-      </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-1 space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4">
+                    <div class="bg-blue-100 p-3 rounded-full text-blue-600">
+                        <ion-icon name="mail-outline" class="text-2xl"></ion-icon>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Email</h3>
+                        <a href="mailto:matan417@gmail.com" class="text-gray-600 hover:text-blue-600 transition-colors">matan417@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4">
+                    <div class="bg-blue-100 p-3 rounded-full text-blue-600">
+                        <ion-icon name="call-outline" class="text-2xl"></ion-icon>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Phone</h3>
+                        <a href="tel:+972508784849" class="text-gray-600 hover:text-blue-600 transition-colors">+972 50-878-4849</a>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-gray-900 mb-4">Social Profiles</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/matan-mayerowicz" target="_blank" class="p-3 bg-gray-50 rounded-lg text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300">
+                            <ion-icon name="logo-linkedin" class="text-2xl"></ion-icon>
+                        </a>
+                        <a href="https://github.com/matanmay" target="_blank" class="p-3 bg-gray-50 rounded-lg text-gray-600 hover:bg-gray-900 hover:text-white transition-all duration-300">
+                            <ion-icon name="logo-github" class="text-2xl"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <form id="contactForm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Your Name *</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 outline-none transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your Email *</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 outline-none transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone (Optional)</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+972..."
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 outline-none transition-colors">
+                            </div>
+                            <div>
+                                <label for="title" class="block mb-2 text-sm font-medium text-gray-900">Subject *</label>
+                                <input type="text" id="title" name="title" placeholder="Project Inquiry" required
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 outline-none transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 outline-none transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" id="btn-submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-3 text-center transition-all duration-300 hover:shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <div id="loading" class="hidden text-center mt-4">
+                        <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-8 w-8 mx-auto"></div>
+                        <p class="mt-2 text-sm text-gray-500">Sending...</p>
+                    </div>
+
+                    <div id="successAlert" class="hidden mt-6 p-4 mb-4 text-green-800 rounded-lg bg-green-50 flex items-center" role="alert">
+                        <ion-icon name="checkmark-circle" class="text-xl mr-2"></ion-icon>
+                        <span class="font-medium">Success!</span>&nbsp; Your message has been sent successfully.
+                    </div>
+
+                    <div id="errorAlert" class="hidden mt-6 p-4 mb-4 text-red-800 rounded-lg bg-red-50 flex items-center" role="alert">
+                        <ion-icon name="alert-circle" class="text-xl mr-2"></ion-icon>
+                        <span class="font-medium">Error!</span>&nbsp; Something went wrong. Please try again.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
     </main>
 
-    <footer class="page-footer py-3 border-top">
-      <div class="container my-4">
-        <div class="links">
-          <a href="index.html">About me</a>
-          <a href="contactMe.html">Contact me</a>
-          <a href="projects.html">Projects</a>
+    <footer class="bg-white border-t border-gray-200 py-10">
+        <div class="container mx-auto px-6 flex flex-col items-center">
+            <div class="flex space-x-6 mb-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">About Me</a>
+                <a href="projects.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Projects</a>
+                <a href="contactMe.html" class="text-blue-600 font-medium">Contact</a>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="https://github.com/matanmay/" target="_blank" class="text-gray-400 hover:text-gray-900 text-2xl transition-colors">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/matan-mayerowicz/" target="_blank" class="text-gray-400 hover:text-blue-700 text-2xl transition-colors">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+            
+            <p class="mt-8 text-sm text-gray-500">© 2025 Matan Mayerowicz. All rights reserved.</p>
         </div>
-        <div class="social-icons">
-          <a class="me-3" href="https://github.com/matanmay/">
-            <i class="icon ion-social-github-outline"></i>
-          </a>
-          <a class="me-3" href="https://www.linkedin.com/in/matan-mayerowicz/">
-            <i class="icon ion-social-linkedin-outline"></i>
-          </a>
-        </div>
-      </div>
     </footer>
 
-    <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const btn = document.getElementById('navbar-toggle');
+        const menu = document.getElementById('navbar-default');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
     
     <script src="config.js"></script>
+
     <script>
-      // Initialize EmailJS with your PUBLIC KEY
-      // TODO: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+      // NOTE: Ensure config.js defines EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID
       emailjs.init(EMAILJS_PUBLIC_KEY);
 
       document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault();
         
-        // Show loading
-        document.querySelector('.loading').style.display = 'block';
-        document.querySelector('.btn-submit').disabled = true;
+        const loading = document.getElementById('loading');
+        const successAlert = document.getElementById('successAlert');
+        const errorAlert = document.getElementById('errorAlert');
+        const submitBtn = document.getElementById('btn-submit');
+
+        // Show loading, disable button
+        loading.classList.remove('hidden');
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
         
-        // Hide previous alerts
-        document.getElementById('successAlert').style.display = 'none';
-        document.getElementById('errorAlert').style.display = 'none';
+        // Hide alerts
+        successAlert.classList.add('hidden');
+        errorAlert.classList.add('hidden');
 
         // Send email
-        // TODO: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
         emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
           .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             
-            // Hide loading
-            document.querySelector('.loading').style.display = 'none';
-            document.querySelector('.btn-submit').disabled = false;
+            // UI Updates
+            loading.classList.add('hidden');
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
             
-            // Show success message
-            document.getElementById('successAlert').style.display = 'block';
-            
-            // Reset form
+            // Show Success
+            successAlert.classList.remove('hidden');
             document.getElementById('contactForm').reset();
             
-            // Scroll to success message
-            document.getElementById('successAlert').scrollIntoView({ behavior: 'smooth' });
           }, function(error) {
             console.log('FAILED...', error);
             
-            // Hide loading
-            document.querySelector('.loading').style.display = 'none';
-            document.querySelector('.btn-submit').disabled = false;
+            // UI Updates
+            loading.classList.add('hidden');
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
             
-            // Show error message
-            document.getElementById('errorAlert').style.display = 'block';
-            
-            // Scroll to error message
-            document.getElementById('errorAlert').scrollIntoView({ behavior: 'smooth' });
+            // Show Error
+            errorAlert.classList.remove('hidden');
           });
       });
     </script>
