@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Matan Mayerowicz. Reach out via email, phone, or social media for collaborations and inquiries." />
     <title>Matan Mayerowicz - Contact Me</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -26,12 +27,13 @@
 
   <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 bg-white/90 backdrop-blur-md">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
             <span class="self-center text-2xl font-bold whitespace-nowrap bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Matan Mayerowicz</span>
         </a>
-        <button id="navbar-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+        <button id="navbar-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -56,114 +58,59 @@
       </div>
     </nav>
 
-    <main class="flex-grow pt-28 pb-16">
-      <div class="container mx-auto px-6 max-w-6xl">
-        
-        <div class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h1>
-            <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-                Interested in working together? Fill out the form below or reach out directly, and I'll get back to you as soon as possible.
-            </p>
+    <!-- Main Content -->
+    <main class="flex-grow pt-28 pb-16 flex items-center">
+      <div class="container mx-auto px-6 max-w-5xl">
+
+        <!-- Page Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Have a question, a project idea, or just want to connect? Reach out to me directly using any of the methods below.</p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Contact Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <div class="lg:col-span-1 space-y-6">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4">
-                    <div class="bg-blue-100 p-3 rounded-full text-blue-600">
-                        <ion-icon name="mail-outline" class="text-2xl"></ion-icon>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-gray-900">Email</h3>
-                        <a href="mailto:matan417@gmail.com" class="text-gray-600 hover:text-blue-600 transition-colors">matan417@gmail.com</a>
-                    </div>
+            <!-- Email Card -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow duration-300">
+                <div class="bg-blue-100 p-4 rounded-full text-blue-600 mb-4">
+                    <ion-icon name="mail-outline" class="text-3xl" aria-hidden="true"></ion-icon>
                 </div>
-                
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4">
-                    <div class="bg-blue-100 p-3 rounded-full text-blue-600">
-                        <ion-icon name="call-outline" class="text-2xl"></ion-icon>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-gray-900">Phone</h3>
-                        <a href="tel:+972508784849" class="text-gray-600 hover:text-blue-600 transition-colors">+972 50-878-4849</a>
-                    </div>
+                <h2 class="font-bold text-xl text-gray-900 mb-2">Email</h2>
+                <a href="mailto:matan417@gmail.com" class="text-gray-600 hover:text-blue-600 transition-colors break-all">matan417@gmail.com</a>
+            </div>
+            
+            <!-- Phone Card -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow duration-300">
+                <div class="bg-blue-100 p-4 rounded-full text-blue-600 mb-4">
+                    <ion-icon name="call-outline" class="text-3xl" aria-hidden="true"></ion-icon>
                 </div>
+                <h2 class="font-bold text-xl text-gray-900 mb-2">Phone</h2>
+                <a href="tel:+972508784849" class="text-gray-600 hover:text-blue-600 transition-colors">+972 50-878-4849</a>
+            </div>
 
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                    <h3 class="font-bold text-gray-900 mb-4">Social Profiles</h3>
-                    <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/matan-mayerowicz" target="_blank" class="p-3 bg-gray-50 rounded-lg text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300">
-                            <ion-icon name="logo-linkedin" class="text-2xl"></ion-icon>
-                        </a>
-                        <a href="https://github.com/matanmay" target="_blank" class="p-3 bg-gray-50 rounded-lg text-gray-600 hover:bg-gray-900 hover:text-white transition-all duration-300">
-                            <ion-icon name="logo-github" class="text-2xl"></ion-icon>
-                        </a>
-                    </div>
+            <!-- Socials Card -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow duration-300">
+                <div class="bg-blue-100 p-4 rounded-full text-blue-600 mb-4">
+                    <ion-icon name="globe-outline" class="text-3xl" aria-hidden="true"></ion-icon>
+                </div>
+                <h2 class="font-bold text-xl text-gray-900 mb-4">Social Profiles</h2>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/matan-mayerowicz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="p-3 bg-gray-50 rounded-lg text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300">
+                        <ion-icon name="logo-linkedin" class="text-2xl" aria-hidden="true"></ion-icon>
+                    </a>
+                    <a href="https://github.com/matanmay" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="p-3 bg-gray-50 rounded-lg text-gray-600 hover:bg-gray-900 hover:text-white transition-all duration-300">
+                        <ion-icon name="logo-github" class="text-2xl" aria-hidden="true"></ion-icon>
+                    </a>
                 </div>
             </div>
 
-            <div class="lg:col-span-2">
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <form id="contactForm">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Your Name *</label>
-                                <input type="text" id="name" name="name" placeholder="John Doe" required
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 outline-none transition-colors">
-                            </div>
-                            <div>
-                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your Email *</label>
-                                <input type="email" id="email" name="email" placeholder="john@example.com" required
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 outline-none transition-colors">
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone (Optional)</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+972..."
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 outline-none transition-colors">
-                            </div>
-                            <div>
-                                <label for="title" class="block mb-2 text-sm font-medium text-gray-900">Subject *</label>
-                                <input type="text" id="title" name="title" placeholder="Project Inquiry" required
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 outline-none transition-colors">
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your Message *</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 outline-none transition-colors"></textarea>
-                        </div>
-
-                        <button type="submit" id="btn-submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-3 text-center transition-all duration-300 hover:shadow-lg">
-                            Send Message
-                        </button>
-                    </form>
-
-                    <div id="loading" class="hidden text-center mt-4">
-                        <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-8 w-8 mx-auto"></div>
-                        <p class="mt-2 text-sm text-gray-500">Sending...</p>
-                    </div>
-
-                    <div id="successAlert" class="hidden mt-6 p-4 mb-4 text-green-800 rounded-lg bg-green-50 flex items-center" role="alert">
-                        <ion-icon name="checkmark-circle" class="text-xl mr-2"></ion-icon>
-                        <span class="font-medium">Success!</span>&nbsp; Your message has been sent successfully.
-                    </div>
-
-                    <div id="errorAlert" class="hidden mt-6 p-4 mb-4 text-red-800 rounded-lg bg-red-50 flex items-center" role="alert">
-                        <ion-icon name="alert-circle" class="text-xl mr-2"></ion-icon>
-                        <span class="font-medium">Error!</span>&nbsp; Something went wrong. Please try again.
-                    </div>
-                </div>
-            </div>
         </div>
-
       </div>
     </main>
 
-    <footer class="bg-white border-t border-gray-200 py-10">
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-10 mt-auto">
         <div class="container mx-auto px-6 flex flex-col items-center">
             <div class="flex space-x-6 mb-6">
                 <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">About Me</a>
@@ -172,76 +119,17 @@
             </div>
             
             <div class="flex space-x-6">
-                <a href="https://github.com/matanmay/" target="_blank" class="text-gray-400 hover:text-gray-900 text-2xl transition-colors">
-                    <ion-icon name="logo-github"></ion-icon>
+                <a href="https://github.com/matanmay/" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-gray-400 hover:text-gray-900 text-2xl transition-colors">
+                    <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
                 </a>
-                <a href="https://www.linkedin.com/in/matan-mayerowicz/" target="_blank" class="text-gray-400 hover:text-blue-700 text-2xl transition-colors">
-                    <ion-icon name="logo-linkedin"></ion-icon>
+                <a href="https://www.linkedin.com/in/matan-mayerowicz/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-gray-400 hover:text-blue-700 text-2xl transition-colors">
+                    <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
                 </a>
             </div>
             
-            <p class="mt-8 text-sm text-gray-500">© 2025 Matan Mayerowicz. All rights reserved.</p>
+            <p class="mt-8 text-sm text-gray-500">© 2026 Matan Mayerowicz. All rights reserved.</p>
         </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-        const btn = document.getElementById('navbar-toggle');
-        const menu = document.getElementById('navbar-default');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+      </footer>
     
-    <script src="config.js"></script>
-
-    <script>
-      // NOTE: Ensure config.js defines EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID
-      emailjs.init(EMAILJS_PUBLIC_KEY);
-
-      document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const loading = document.getElementById('loading');
-        const successAlert = document.getElementById('successAlert');
-        const errorAlert = document.getElementById('errorAlert');
-        const submitBtn = document.getElementById('btn-submit');
-
-        // Show loading, disable button
-        loading.classList.remove('hidden');
-        submitBtn.disabled = true;
-        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
-        
-        // Hide alerts
-        successAlert.classList.add('hidden');
-        errorAlert.classList.add('hidden');
-
-        // Send email
-        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
-          .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            
-            // UI Updates
-            loading.classList.add('hidden');
-            submitBtn.disabled = false;
-            submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-            
-            // Show Success
-            successAlert.classList.remove('hidden');
-            document.getElementById('contactForm').reset();
-            
-          }, function(error) {
-            console.log('FAILED...', error);
-            
-            // UI Updates
-            loading.classList.add('hidden');
-            submitBtn.disabled = false;
-            submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-            
-            // Show Error
-            errorAlert.classList.remove('hidden');
-          });
-      });
-    </script>
   </body>
 </html>
